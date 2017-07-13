@@ -4,9 +4,7 @@ from PIL import Image
 def brightness(color):
     return (color['r'] / 255) * 0.3 + (color['g'] / 255) * 0.59 + (color['b'] / 255) * 0.11
 
-#characters = ['g', 's', 'a', 'e', 'o', 'c', 'b', 'd', 'p', 'q', 'h', 'u', 'n', 'm', 'r', 't', 'f', 'i', 'j', 'l', 'k', 'x', 'z', 'w', 'v', 'y', '=', '-']
-#characters = ['@', '&', '#', '8', '0', 'g', 's', 'a', 'e', 'o', 'c', 'b', 'd', 'p', 'q', 'h', 'u', 'n', 'm', '*', 'r', 't', 'f', 'i', 'j', 'l', 'k', 'x', 'z', 'w', 'v', 'y', '=', '-']
-#characters = ['@', '0', 'm', 'w', 'a', 'e', 'n', 'u', 's', 'x', 'l', 'i', 'v', '*', 'r', '-']
+# characters in a spectrum where leftmost is brightest and rightmost is darkest
 characters = ['@', '&', '0', 'm', 'w', 'a', 'e', 'n', 'u', 'x', 'l', 'i', 'v', '*', 'r', '~', '-']
 characters.reverse()
 
@@ -15,7 +13,7 @@ BLOCK_WIDTH = 4
 BLOCK_HEIGHT = 8
 RANGE_FACTOR = (255 * 3) / len(characters)
 
-im = Image.open("joelho.jpg")
+im = Image.open("<img-path-here>")
 
 block_map = []
 
