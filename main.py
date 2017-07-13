@@ -8,7 +8,6 @@ def brightness(color):
 characters = ['@', '&', '0', 'm', 'w', 'a', 'e', 'n', 'u', 'x', 'l', 'i', 'v', '*', 'r', '~', '-']
 characters.reverse()
 
-BLOCK_SIZE = 2
 BLOCK_WIDTH = 4
 BLOCK_HEIGHT = 8
 RANGE_FACTOR = (255 * 3) / len(characters)
