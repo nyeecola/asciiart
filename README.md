@@ -10,4 +10,4 @@ To get good results you must use this in a dark background-color terminal/editor
     - These are the constants that define the final size of the converted image.
     - A smaller block size means a bigger ascii art.
     - The minimum value for BLOCK_WIDTH and BLOCK_HEIGHT is 1. This means that if they are 1 each pixel of the input image will be translated to exactly 1 ascii character.
-    - Also, beware that they are inversely proportional to the image width and height. This means that if you want a final image that has lower height, you should increase BLOCK_HEIGHT's value.
+    - Also, beware that they are inversely proportional to the image width and height. This means that if you want a final art with less height, you should *increase* BLOCK_HEIGHT's value.
