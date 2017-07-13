@@ -10,8 +10,8 @@ characters = ['@', '&', '0', 'm', 'w', 'a', 'e', 'n', 'u', 'x', 'l', 'i', 'v', '
 characters.reverse()
 
 # CONSTANTS
-BLOCK_WIDTH = 4
-BLOCK_HEIGHT = 8
+BLOCK_WIDTH = 3
+BLOCK_HEIGHT = 5
 
 # DON'T CHANGE THIS ONE
 RANGE_FACTOR = (255 * 3) / len(characters)
@@ -26,6 +26,8 @@ while block_x + BLOCK_HEIGHT <= im.height:
     block_y = 0
     while block_y + BLOCK_WIDTH <= im.width:
         color_total = {'r': 0, 'g': 0, 'b': 0}
+        color_avg = {'r': 0, 'g': 0, 'b': 0}
+        #brightness_avg = {'r': 0, 'g': 0, 'b': 0}
         for i in range(BLOCK_WIDTH):
             for j in range(BLOCK_HEIGHT):
                 color_total['r'] += im.getpixel((block_y + i, block_x + j))[0]
@@ -34,6 +36,7 @@ while block_x + BLOCK_HEIGHT <= im.height:
 
         pixel_count = BLOCK_WIDTH * BLOCK_HEIGHT
         color_avg = {'r': color_total['r'] / pixel_count, 'g': color_total['g'] / pixel_count, 'b': color_total['b'] / pixel_count}
+        #brightness_avg = {'r': color_total['r'] / pixel_count, 'g': color_total['g'] / pixel_count, 'b': color_total['b'] / pixel_count}
 
         block_map[-1].append(color_avg)
 
