@@ -16,7 +16,7 @@ BLOCK_HEIGHT = 8
 # DON'T CHANGE THIS ONE
 RANGE_FACTOR = (255 * 3) / len(characters)
 
-im = Image.open("ceara.jpg")
+im = Image.open("<img-path-here>")
 
 block_map = []
 
