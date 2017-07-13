@@ -16,7 +16,7 @@ BLOCK_HEIGHT = 8
 # DON'T CHANGE THIS ONE
 RANGE_FACTOR = (255 * 3) / len(characters)
 
-im = Image.open("<img-path-here>")
+im = Image.open("ceara.jpg")
 
 block_map = []
 
@@ -50,5 +50,3 @@ while block_x + BLOCK_HEIGHT <= im.height:
 
     print()
     block_x += BLOCK_HEIGHT
-
-im.save("out.bmp")
