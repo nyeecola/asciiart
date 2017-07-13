@@ -1,6 +1,7 @@
 import math
 from PIL import Image
 
+# returns the brightness of a given color
 def brightness(color):
     return (color['r'] / 255) * 0.3 + (color['g'] / 255) * 0.59 + (color['b'] / 255) * 0.11
 
@@ -8,8 +9,11 @@ def brightness(color):
 characters = ['@', '&', '0', 'm', 'w', 'a', 'e', 'n', 'u', 'x', 'l', 'i', 'v', '*', 'r', '~', '-']
 characters.reverse()
 
+# CONSTANTS
 BLOCK_WIDTH = 4
 BLOCK_HEIGHT = 8
+
+# DON'T CHANGE THIS ONE
 RANGE_FACTOR = (255 * 3) / len(characters)
 
 im = Image.open("<img-path-here>")
@@ -28,8 +32,8 @@ while block_x + BLOCK_HEIGHT <= im.height:
                 color_total['g'] += im.getpixel((block_y + i, block_x + j))[1]
                 color_total['b'] += im.getpixel((block_y + i, block_x + j))[2]
 
-        pixels_count = BLOCK_WIDTH * BLOCK_HEIGHT
-        color_avg = {'r': color_total['r'] / pixels_count, 'g': color_total['g'] / pixels_count, 'b': color_total['b'] / pixels_count}
+        pixel_count = BLOCK_WIDTH * BLOCK_HEIGHT
+        color_avg = {'r': color_total['r'] / pixel_count, 'g': color_total['g'] / pixel_count, 'b': color_total['b'] / pixel_count}
 
         block_map[-1].append(color_avg)
 
